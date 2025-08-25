@@ -6,8 +6,8 @@ import os
 
 # GitHub 配置
 GITHUB_TOKEN = os.getenv('YOU_TOKEN')  # 从环境变量中获取 Token
-REPO_OWNER = 'hjpwyb'
-REPO_NAME = 'yuan'
+REPO_OWNER = 'qunhui201'
+REPO_NAME = 'Moom'
 FILE_PATH = 'tv/XYQHiker/字幕仓库.json'
 BRANCH_NAME = 'main'
 COMMIT_MESSAGE = '更新链接替换'

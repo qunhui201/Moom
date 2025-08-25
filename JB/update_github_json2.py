@@ -5,7 +5,7 @@ import urllib.parse
 import os
 
 # GitHub configuration
-GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')  # Use GITHUB_TOKEN
+GITHUB_TOKEN = os.getenv('ACTIONS_TOKEN')  # Use GITHUB_TOKEN
 REPO_OWNER = 'qunhui201'
 REPO_NAME = 'Moom'
 FILE_PATH = 'tv/XYQHiker/黄色仓库.json'  # Verify this path

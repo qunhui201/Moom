@@ -1,9 +1,9 @@
 name: Update Domain
 
 on:
-  workflow_dispatch:  # 支持手动触发
+  workflow_dispatch:  # 手动触发
   schedule:
-    - cron: '0 * * * *'  # 每小时的第一分钟执行一次
+    - cron: '0 * * * *'  # 每小时执行一次
 
 jobs:
   update-domain:
@@ -37,6 +37,7 @@ jobs:
 
         git status --untracked-files=all --short | grep "JB/" || exit 0
 
+        # 使用 PAT 推送
         git add JB/valid_links2.txt
         git commit -m "Update valid domain links"
         git push https://x-access-token:${{ secrets.ACTIONS_TOKEN }}@github.com/${{ github.repository }} HEAD:main

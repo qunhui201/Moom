@@ -25,7 +25,7 @@ jobs:
 
     - name: Run update_domain.py script
       env:
-        GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}  # 使用 PAT 提交
+        YOU_TOKEN: ${{ secrets.YOU_TOKEN }}  # 读取 GitHub Secrets 中的 Token
       run: |
         echo "Running update_domain.py script..."
         python3 JB/update_domain.py  # 执行位于 JB 文件夹下的域名更新脚本

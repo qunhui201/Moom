@@ -3,10 +3,10 @@ name: Update JSON File
 on:
   push:
     paths:
-      - JB/valid_links.txt  # 当 valid_links.txt 变化时触发
-  workflow_dispatch:  # 手动触发
+      - JB/valid_links2.txt  # Match the script's file name
+  workflow_dispatch:
   schedule:
-    - cron: "0 * * * *"  # 每小时运行一次
+    - cron: "0 * * * *"  # Every hour
 
 jobs:
   update-json:
@@ -28,12 +28,12 @@ jobs:
 
       - name: Run JSON Update Script
         env:
-          ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}  # GitHub Secrets 中的 Token
+          ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}  # Use default GITHUB_TOKEN
         run: python JB/update_github_json2.py
 
       - name: Show updated content
         run: |
-          echo "=== 更新后的 valid_links.txt 文件内容 ==="
-          cat JB/valid_links.txt
-          echo "=== 更新后的 JSON 文件内容 ==="
-          cat tv/XYQHiker/黄色仓库.json  # 使用正确的路径
+          echo "=== Updated valid_links2.txt content ==="
+          cat JB/valid_links2.txt
+          echo "=== Updated JSON content ==="
+          cat tv/XYQHiker/黄色仓库.json

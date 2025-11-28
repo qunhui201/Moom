@@ -26,7 +26,7 @@ def main():
     valid_links = []
 
     # 这里可以调整范围，比如 8000-8099
-    for i in range(6600, 6699):
+    for i in range(600, 6799):
         domain = f"{i}ck.cc"
         url_to_test = base_url_template.format(domain=domain)
         print(f"Testing URL: {url_to_test}")

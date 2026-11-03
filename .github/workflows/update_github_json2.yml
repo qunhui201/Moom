@@ -5,8 +5,7 @@ on:
     paths:
       - JB/valid_links2.txt  # Match the script's file name
   workflow_dispatch:
-  schedule:
-    - cron: "0 * * * *"  # Every hour
+
 
 jobs:
   update-json:
